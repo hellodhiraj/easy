@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Easysell</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+        <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css"/>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style>
+            body{
+                background-color:#ededed;
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <nav class="navbar navbar-inverse" style="height: 5%">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.xhtml">Easy Sell</a>
+                </div>
+
+                <ul class="nav navbar-nav navbar-right" style="padding-top:0.45%;margin-right:2%">
+                    <h:form>
+
+
+                        <li><h:commandButton class="btn btn-success" disabled="#{registerController.registerObj.button}" value="Free Ads" action="registerAds"/></li>
+                    </h:form>
+                </ul>
+                <ul class="nav navbar-nav navbar-right" style="padding-top:0.90%;margin-right:2%">
+                    <h:form>
+
+
+                        <li><span  style="color:white"></span> <h:commandLink value="Sign in" action="signin"  style="display:#{registerController.registerObj.property};color:white;"/> </li>
+                    </h:form>
+                </ul>
+                <ul class="nav navbar-nav navbar-right" style="padding-top:0.90%;margin-right:2%">
+                    <h:form>
+
+
+                        <li><span  style="color: #9d9d9d"></span> <h:commandLink value="Sign up" action="signUp"  style="display:#{registerController.registerObj.property};color:white; "/> </li>
+                    </h:form>
+                </ul>
+                <ul class="nav navbar-nav navbar-right" style="padding-top:0.90%;margin-right:2%">
+
+
+
+                    <li> <h:outputLabel style="color:white;display:#{registerController.registerObj.welcome}" >Welcome,#{registerController.registerObj.firstName}</h:outputLabel></li>
+
+                </ul>
+            </div>
+        </nav>
+        <br></br><br></br>
+        <div class="w3-third w3-container"></div>
+        <div class="w3-third w3-card-4" style="background-color: white">
+
+            <div class=" w3-container w3-teal" >
+                <h2>Detail</h2>
+            </div>
+
+            <h:form class="w3-container" style="background-color: white">
+
+                <table class="w3-table">
+                    <tr>
+                        <th>Price:</th>
+                        <td>#{adsController.adsObj.price}</td>
+
+
+                    </tr>
+                    <tr>
+                        <th>City:</th>
+                        <td>#{adsController.adsObj.model}</td>
+
+                    </tr>
+                    <tr>
+                        <th>Year:</th>
+                        <td>#{adsController.adsObj.year}</td>
+
+                    </tr>
+                    <tr>
+                        <th>Brand:</th>
+                        <td>#{adsController.adsObj.brand}</td>
+
+                    </tr>
+                    <tr>
+                        <th>Color:</th>
+                        <td>#{adsController.adsObj.color}</td>
+
+                    </tr>
+                    <tr>
+                        <th>Description:</th>
+                        <td>#{adsController.adsObj.description}</td>
+
+                    </tr>
+                    <tr>
+                        <th>email:</th>
+                        <td>#{adsController.adsObj.email}</td>
+
+                    </tr>
+
+                </table>
+            </h:form>
+
+            <br></br>
+
+        </div>
+
+    </h:body>
+</html>
+
